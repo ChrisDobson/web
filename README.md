@@ -3,7 +3,7 @@
 - 🌱 I’m currently learning JavaScript
 - 💞️ I’m looking to collaborate on making the world a better place
 - 📫 How to reach me: on GitHub or Slack
-- 😄 Pronouns: he/him
+- 😄 Pronouns: he/they
 - ⚡ Fun fact: Ich spreche Deutsch
 
 <!---
