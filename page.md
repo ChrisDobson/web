@@ -1,4 +1,4 @@
-- 👋 Hi, I’m Chris Dobson
+- 👋 Hi, I’m **Chris Dobson**
 - ♟️ I'm interested in coding and chess
 - 🐍 I’m currently learning JavaScript and Python
 - 🌍 I’m looking to collaborate on making the world a better place
