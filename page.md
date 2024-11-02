@@ -5,4 +5,8 @@
 ### 📫 How to reach me: [LinkedIn](https://www.linkedin.com/in/chris-dobson-572004256/)
 ### 🏳️‍🌈 Pronouns: he/they
 ### 🇩🇪 Fun fact: Ich spreche Deutsch
-![me](https://github.com/ChrisDobson/web/blob/main/Me.jpg?raw=true)
+ <img
+      src="Me.jpg"
+      alt="Me"
+      width="500"
+      height="600" />
