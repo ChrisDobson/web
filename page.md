@@ -2,7 +2,7 @@
 
 <img
       src="Me.jpg"
-      alt="Me"
+      alt="A man stands on a wall next to the River Thames. The Sun is shining brightly and the Shard, Britain's tallest building, rises in the distance."
       width="500"
       height="600" />
 
