@@ -34,4 +34,4 @@ In total, project week consisted of 23 tasks. At the beginning, this felt quite 
 
 I had created over 20 new files in my repository (that’s the name for the collection of code which is stored on GitHub), so on day 5 I dedicated a lot of time to re-organising these files, so that a different developer could easily understand it. I encourage you to take a look for yourself by going to [GitHub](https://github.com/ChrisDobson/my-nc-news). You can also connect with me on [LinkedIn](https://www.linkedin.com/in/christopher-d-572004256/).
 
-**View my CV here: [Christopher Dobson's CV](https//chrisdobson.github.io/web/)**
+**View my CV here: [Christopher Dobson's CV](https://chrisdobson.github.io/web/)**
