@@ -12,22 +12,22 @@
 
     :root {
       --ink:     #1a1612;
-      --paper:   #f7f3ee;
-      --warm:    #e8ddd0;
+      --paper:   #ffffff; /* True White */
+      --warm:    #f5eee6;
       --accent:  #8b5e3c;
-      --muted:   #9e9189;
-      --rule:    #d4c9bc;
-      --dark:    #111009;
+      --muted:   #756a62;
+      --rule:    #e6dfd5;
+      --dark:    #000000;
     }
 
     /* ── DARK THEME VARIABLES ───────────── */
     body.dark-mode {
       --ink:     #f7f3ee;
-      --paper:   #151410;
-      --warm:    #2d2924;
+      --paper:   #000000; /* True Black */
+      --warm:    #1a1815;
       --accent:  #d2a379;
       --muted:   #a39891;
-      --rule:    #3d3730;
+      --rule:    #2a2622;
     }
 
     html { scroll-behavior: smooth; }
@@ -39,7 +39,7 @@
       font-weight: 300;
       font-size: 16px;
       line-height: 1.7;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
     /* ── TOGGLE CONTROLLER ──────────────── */
@@ -47,6 +47,8 @@
       margin-top: 1.5rem;
       display: flex;
       gap: 0.5rem;
+      position: relative;
+      z-index: 10; /* Ensures buttons sit above other elements */
     }
 
     .toggle-btn {
@@ -68,29 +70,34 @@
       color: var(--paper);
     }
 
-    /* ── DARK MODE CARD SPECIFICS ───────── */
-    body.dark-mode .venue-card:hover {
-      background: #1e1c17;
-    }
-    
-    body.dark-mode .press-card {
-      background: var(--paper);
-    }
-    body.dark-mode .press-card:active {
-      background: var(--warm);
-    }
-
-    /* ── HERO ─────────────────────────── */
+    /* ── HERO IMAGE & CREDIT ────────────── */
     header {
       width: 100%;
       overflow: hidden;
       border-bottom: 1px solid var(--rule);
+      position: relative;
     }
 
     .hero-photo {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    .photo-credit {
+      padding: 0.5rem 1.5rem;
+      font-size: 11px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--rule);
+      text-align: right;
+    }
+
+    .photo-credit a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .photo-credit a:hover {
+      text-decoration: underline;
     }
 
     .hero-content {
@@ -173,7 +180,7 @@
     }
 
     .venue-card:hover {
-      background: #f2ede6;
+      background: var(--warm);
     }
 
     .venue-img-wrap {
@@ -191,6 +198,10 @@
       object-fit: cover;
       filter: sepia(15%) contrast(1.02);
       display: block;
+    }
+
+    body.dark-mode .venue-img-wrap img {
+      filter: brightness(0.9) contrast(1.1);
     }
 
     .venue-img-placeholder {
@@ -246,7 +257,7 @@
       transition: background .2s;
     }
 
-    .press-card:active { background: var(--warm); }
+    .press-card:hover { background: var(--warm); }
 
     .press-icon {
       width: 44px;
@@ -287,12 +298,13 @@
 
     /* ── SOCIAL SECTION ──────────────── */
     .social-section {
-      background: var(--dark);
+      background: #000000;
       padding: 2.5rem 1.5rem;
     }
 
     body.dark-mode .social-section {
-      background: #000000;
+      background: #0d0d0d;
+      border-top: 1px solid var(--rule);
     }
 
     .social-section .section-label {
@@ -353,13 +365,13 @@
     /* ── FOOTER ──────────────────────── */
     footer {
       padding: 2.5rem 1.5rem;
-      background: var(--dark);
+      background: #000000;
       border-top: 1px solid rgba(255,255,255,.08);
       text-align: center;
     }
 
     body.dark-mode footer {
-      background: #000000;
+      background: #0d0d0d;
     }
 
     .footer-eyebrow {
@@ -383,8 +395,8 @@
     @media (min-width: 640px) {
       .hero-content { padding: 4rem 3rem 3rem; }
       h1 { font-size: clamp(4rem, 8vw, 7rem); }
-      .dark-band { padding: 2.5rem 3rem; }
       .intro-text { padding: 3rem; }
+      .photo-credit { padding: 0.5rem 3rem; }
       .section-header { padding: 2rem 3rem 1.5rem; }
       .venues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); }
       .venue-card { flex-direction: column; }
@@ -404,7 +416,7 @@
 </head>
 <body>
 
-<!-- HERO -->
+<!-- HERO CONTENT CONTAINER -->
 <div class="hero-content">
   <h1>Model<br/><em>Chris</em></h1>
   <p class="hero-sub">
@@ -420,9 +432,13 @@
   </div>
 </div>
 
+<!-- HERO IMAGE & CREDIT -->
 <header>
   <img class="hero-photo" src="chris.jpg" alt="Chris Dobson, art model" />
 </header>
+<div class="photo-credit">
+  Photo by <a href="https://www.instagram.com/modelpascal" target="_blank" rel="noopener">@modelpascal</a>
+</div>
 
 <!-- INTRO -->
 <div class="intro-text">
@@ -607,13 +623,4 @@
   </a>
 
   <a class="venue-card" href="https://www.tetterode.nl/" target="_blank" rel="noopener">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <div class="venue-name">Tetterode</div>
-      <div class="venue-location">Bilderdijkstraat 165, Amsterdam</div>
-      <div class="venue-rating">Historic live-work complex</div>
-    </div>
-  </a>
-
-  <a class="venue-card" href="https://wackersacademie.nl/" target="_blank" rel="noopener">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" 
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="1
