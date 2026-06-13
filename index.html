@@ -28,6 +28,9 @@
       --accent:  #d2a379;
       --muted:   #a39891;
       --rule:    #2a2622;
+      
+      /* Forces everything (images, backgrounds, text, emojis) into black & white */
+      filter: grayscale(100%);
     }
 
     html { scroll-behavior: smooth; }
@@ -39,7 +42,7 @@
       font-weight: 300;
       font-size: 16px;
       line-height: 1.7;
-      transition: background 0.2s ease, color 0.2s ease;
+      transition: background 0.2s ease, color 0.2s ease, filter 0.2s ease;
     }
 
     /* ── FLOATING TOP BAR FOR CONTROLS ─── */
@@ -668,6 +671,5 @@
     }
   }
 </script>
-
 </body>
 </html>
