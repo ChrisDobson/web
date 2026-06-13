@@ -17,6 +17,7 @@
       --accent:  #8b5e3c;
       --muted:   #9e9189;
       --rule:    #d4c9bc;
+      --dark:    #111009;
     }
 
     html { scroll-behavior: smooth; }
@@ -26,51 +27,47 @@
       color: var(--ink);
       font-family: 'DM Sans', sans-serif;
       font-weight: 300;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.7;
     }
 
-    /* ── HERO ─────────────────────────────── */
+    /* ── HERO ─────────────────────────── */
     header {
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: clamp(2rem, 8vw, 7rem) clamp(1.5rem, 7vw, 6rem);
-      border-bottom: 1px solid var(--rule);
-      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
       overflow: hidden;
     }
 
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 70% at 85% 40%, rgba(139,94,60,.10) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(139,94,60,.06) 0%, transparent 60%);
-      pointer-events: none;
+    .hero-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .hero-content {
+      padding: 2rem 1.5rem 2.5rem;
+      border-bottom: 1px solid var(--rule);
     }
 
     .eyebrow {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 400;
-      letter-spacing: .22em;
+      letter-spacing: .24em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 1.8rem;
+      margin-bottom: 1rem;
     }
 
     h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-weight: 300;
-      font-size: clamp(3.2rem, 9vw, 8rem);
+      font-size: 4rem;
       line-height: 1.0;
       letter-spacing: -.01em;
-      max-width: 14ch;
-      margin-bottom: 1.8rem;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
     }
 
     h1 em {
@@ -79,141 +76,78 @@
     }
 
     .hero-sub {
-      font-size: clamp(.95rem, 1.5vw, 1.1rem);
+      font-size: .92rem;
       color: var(--muted);
-      max-width: 48ch;
-      line-height: 1.8;
+      line-height: 1.85;
+      max-width: 36ch;
     }
 
-    .scroll-hint {
-      position: absolute;
-      bottom: 2.5rem;
-      left: clamp(1.5rem, 7vw, 6rem);
-      font-size: 10px;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--rule);
-      display: flex;
-      align-items: center;
-      gap: .6rem;
-    }
-
-    .scroll-hint::before {
-      content: '';
-      display: block;
-      width: 30px;
-      height: 1px;
-      background: var(--rule);
-    }
-
-    /* ── INTRO ───────────────────────────── */
-    .intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
+    /* ── INTRO ───────────────────────── */
     .intro-text {
-      padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 7vw, 6rem);
-      border-right: 1px solid var(--rule);
+      padding: 2.5rem 1.5rem;
+      border-bottom: 1px solid var(--rule);
     }
 
     .intro-text h2 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 300;
-      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+      font-size: 1.7rem;
       line-height: 1.25;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1rem;
     }
 
-    .intro-text p { color: var(--muted); }
+    .intro-text p { color: var(--muted); font-size: .93rem; }
 
-    .intro-stat {
-      padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 7vw, 6rem);
+    /* ── SECTION HEADERS ─────────────── */
+    .section-header {
+      padding: 1.6rem 1.5rem 1.2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .section-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin-bottom: .15rem;
+    }
+
+    .section-header span {
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── VENUE CARDS ─────────────────── */
+    .venues-grid {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-    }
-
-    .stat-number {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(5rem, 10vw, 9rem);
-      font-weight: 300;
-      line-height: 1;
-      color: var(--accent);
-    }
-
-    .stat-label {
-      font-size: 11px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: .5rem;
-    }
-
-    /* ── VENUES SECTION ──────────────────── */
-    .venues-header {
-      padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 7vw, 6rem);
-      border-bottom: 1px solid var(--rule);
-      display: flex;
-      align-items: baseline;
-      gap: 1.5rem;
-    }
-
-    .venues-header h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
-    }
-
-    .venues-header span {
-      font-size: 11px;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* Grid of venue cards */
-    .venues-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 
     .venue-card {
-      border-right: 1px solid var(--rule);
       border-bottom: 1px solid var(--rule);
       overflow: hidden;
-      position: relative;
       background: var(--paper);
-      transition: background .25s;
+      display: flex;
     }
 
-    .venue-card:hover { background: var(--warm); }
-
     .venue-img-wrap {
-      width: 100%;
-      aspect-ratio: 4/3;
+      width: 100px;
+      min-width: 100px;
+      aspect-ratio: 1;
       overflow: hidden;
       background: var(--warm);
-      position: relative;
+      flex-shrink: 0;
     }
 
     .venue-img-wrap img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: sepia(20%) contrast(1.02);
-      transition: transform .5s ease, filter .5s ease;
+      filter: sepia(15%) contrast(1.02);
       display: block;
     }
 
-    .venue-card:hover .venue-img-wrap img {
-      transform: scale(1.04);
-      filter: sepia(5%) contrast(1.05);
-    }
-
-    /* Placeholder when no image */
     .venue-img-placeholder {
       width: 100%;
       height: 100%;
@@ -223,87 +157,195 @@
       background: linear-gradient(135deg, var(--warm) 0%, var(--rule) 100%);
     }
 
-    .venue-img-placeholder svg {
-      opacity: .25;
-      width: 48px;
-      height: 48px;
-    }
+    .venue-img-placeholder svg { opacity: .2; width: 28px; height: 28px; }
 
     .venue-body {
-      padding: 1.4rem 1.6rem 1.8rem;
+      padding: .9rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .venue-index {
-      font-size: 10px;
+      font-size: 9px;
       letter-spacing: .2em;
       text-transform: uppercase;
       color: var(--muted);
       display: block;
-      margin-bottom: .5rem;
+      margin-bottom: .2rem;
     }
 
     .venue-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 400;
-      line-height: 1.25;
-      margin-bottom: .4rem;
+      line-height: 1.2;
+      margin-bottom: .2rem;
     }
 
     .venue-location {
-      font-size: .82rem;
+      font-size: .75rem;
       color: var(--muted);
+      line-height: 1.4;
     }
 
     .venue-rating {
-      margin-top: .8rem;
-      font-size: .8rem;
+      margin-top: .35rem;
+      font-size: .72rem;
       color: var(--accent);
-      letter-spacing: .05em;
     }
 
-    /* ── FOOTER ───────────────────────────── */
-    footer {
-      padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 7vw, 6rem);
-      border-top: 1px solid var(--rule);
+    /* ── PRESS CARDS ─────────────────── */
+    .press-grid { display: flex; flex-direction: column; }
+
+    .press-card {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       gap: 1rem;
-      flex-wrap: wrap;
+      padding: 1.3rem 1.5rem;
+      border-bottom: 1px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      background: var(--paper);
+      transition: background .2s;
+    }
+
+    .press-card:active { background: var(--warm); }
+
+    .press-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--warm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.3rem;
+    }
+
+    .press-text { flex: 1; }
+
+    .press-type {
+      font-size: 9px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .2rem;
+    }
+
+    .press-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      line-height: 1.2;
+      margin-bottom: .15rem;
+    }
+
+    .press-desc {
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .press-arrow { color: var(--rule); font-size: 1.3rem; flex-shrink: 0; }
+
+    /* ── SOCIAL SECTION ──────────────── */
+    .social-section {
+      background: var(--dark);
+      padding: 2.5rem 1.5rem;
+    }
+
+    .social-section .section-label {
+      font-size: 10px;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+      margin-bottom: 1.8rem;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+    }
+
+    .social-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      min-height: 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-card::after {
+      content: '→';
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      font-size: .9rem;
+      opacity: .5;
+    }
+
+    .social-card.instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); }
+    .social-card.onlyfans  { background: linear-gradient(135deg, #00aff0, #0085b3); }
+    .social-card.patreon   { background: linear-gradient(135deg, #ff424d, #e6373f); }
+    .social-card.bluesky   { background: linear-gradient(135deg, #0085ff, #0063cc); }
+
+    .social-platform {
+      font-size: 9px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      opacity: .75;
+    }
+
+    .social-handle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    /* ── FOOTER ──────────────────────── */
+    footer {
+      padding: 1.8rem 1.5rem;
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
     }
 
     footer .name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 300;
+      color: rgba(255,255,255,.3);
+      letter-spacing: .05em;
     }
 
-    footer .links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    footer a {
-      font-size: .8rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color .2s;
-    }
-
-    footer a:hover { color: var(--accent); }
-
-    /* ── RESPONSIVE ──────────────────────── */
-    @media (max-width: 640px) {
-      .intro { grid-template-columns: 1fr; }
-      .intro-text { border-right: none; border-bottom: 1px solid var(--rule); }
-      .venues-grid { grid-template-columns: 1fr; }
+    /* ── DESKTOP UPGRADE ─────────────── */
+    @media (min-width: 640px) {
+      header { aspect-ratio: 16/7; }
+      .hero-content { padding: 3rem 3rem 3rem; }
+      h1 { font-size: clamp(4rem, 8vw, 7rem); }
+      .dark-band { padding: 2.5rem 3rem; }
+      .intro-text { padding: 3rem; }
+      .section-header { padding: 2rem 3rem 1.5rem; }
+      .venues-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); }
+      .venue-card { flex-direction: column; }
+      .venue-img-wrap { width: 100%; min-width: unset; aspect-ratio: 4/3; }
+      .press-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+      .press-card { border-right: 1px solid var(--rule); }
+      .social-section { padding: 3rem; }
+      .social-grid { grid-template-columns: repeat(4, 1fr); }
+      footer { padding: 2rem 3rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .venue-img-wrap img, .venue-card { transition: none; }
+      * { transition: none !important; animation: none !important; }
     }
   </style>
 </head>
@@ -311,6 +353,10 @@
 
 <!-- HERO -->
 <header>
+  <img class="hero-photo" src="light7.jpeg" alt="Chris Dobson, art model" />
+</header>
+
+<div class="hero-content">
   <p class="eyebrow">Amsterdam · Art Model</p>
   <h1>Model<br/><em>Chris</em></h1>
   <p class="hero-sub">
@@ -318,104 +364,128 @@
     In September of that year, I began working as a model for art classes.
     What started as a paid hobby has turned into my full-time job.
   </p>
-  <div class="venue-img-wrap">
-      <img
-        src="light7.jpeg"
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="A photo of a man looking at the camera."
-        loading="lazy"
-      />
-    </div>
-</header>
+</div>
 
 <!-- INTRO -->
-<section class="intro">
-  <div class="intro-text">
-    <h2>Modelling as a meditative act</h2>
-    <p>
-      I find modelling very relaxing.
-      Whether I am posing fully-dressed (for a portrait class) or nude, modelling provides me with an opportunity to be fully present in the moment.
-      On this website, I want to shine a spotlight on all the venues where I have modelled (so far).
-    </p>
+<div class="intro-text">
+  <h2>Modelling as a meditative act</h2>
+  <p>
+    I find modelling very relaxing.
+    Whether I am posing fully-dressed (for a portrait class) or nude, modelling provides me with an opportunity to be fully present in the moment.
+    On this website, I want to shine a spotlight on all the venues where I have modelled (so far).
+  </p>
+</div>
+
+<!-- SOCIAL -->
+<div class="social-section">
+  <div class="section-label">Follow &amp; support</div>
+  <div class="social-grid">
+
+    <a class="social-card instagram" href="https://instagram.com/artmodel_chris" target="_blank" rel="noopener">
+      <div class="social-platform">Instagram</div>
+      <div class="social-handle">@artmodel_chris</div>
+    </a>
+
+    <a class="social-card onlyfans" href="https://onlyfans.com/modelchris" target="_blank" rel="noopener">
+      <div class="social-platform">OnlyFans</div>
+      <div class="social-handle">modelchris</div>
+    </a>
+
+    <a class="social-card patreon" href="https://patreon.com/modelchris" target="_blank" rel="noopener">
+      <div class="social-platform">Patreon</div>
+      <div class="social-handle">modelchris</div>
+    </a>
+
+    <a class="social-card bluesky" href="https://bsky.app/profile/cspdobson.bsky.social" target="_blank" rel="noopener">
+      <div class="social-platform">Bluesky</div>
+      <div class="social-handle">@cspdobson</div>
+    </a>
+
   </div>
-  <div class="intro-stat">
-    <div class="stat-number">13</div>
-    <div class="stat-label">Art schools &amp; individual artists</div>
-  </div>
-</section>
+</div>
+
+
+<!-- PRESS -->
+<div class="section-header">
+  <h2>As featured in</h2>
+  <span>Press &amp; media</span>
+</div>
+
+<div class="press-grid">
+
+  <a class="press-card" href="https://redlightjazzradio.nl/uitzendingen/ex-bewaker-van-de-tower-of-london-poseert-nu-naakt-voor-kunstenaars" target="_blank" rel="noopener">
+    <div class="press-icon">📻</div>
+    <div class="press-text">
+      <div class="press-type">Radio · Dutch</div>
+      <div class="press-name">Red Light Jazz Radio</div>
+      <div class="press-desc">Ex-bewaker van de Tower of London poseert nu naakt voor kunstenaars</div>
+    </div>
+    <div class="press-arrow">›</div>
+  </a>
+
+  <a class="press-card" href="https://open.spotify.com/episode/6vS8TdK84XUdhNIyQ1Kexn?si=7j4f0bYJTDGv3cuKHh4fyg&t=1581" target="_blank" rel="noopener">
+    <div class="press-icon">🎙</div>
+    <div class="press-text">
+      <div class="press-type">Podcast · Spotify</div>
+      <div class="press-name">Bad Chat</div>
+      <div class="press-desc">With Greg James &amp; Alice Levine</div>
+    </div>
+    <div class="press-arrow">›</div>
+  </a>
+
+  <a class="press-card" href="https://reddit.com/r/AMA/comments/1to0tn5" target="_blank" rel="noopener">
+    <div class="press-icon">💬</div>
+    <div class="press-text">
+      <div class="press-type">Reddit · AMA</div>
+      <div class="press-name">Ask Me Anything</div>
+      <div class="press-desc">r/AMA — answering your questions</div>
+    </div>
+    <div class="press-arrow">›</div>
+  </a>
+
+</div>
+
 
 <!-- VENUES -->
-<div class="venues-header">
+<div class="section-header">
   <h2>Where I have modelled</h2>
   <span>Amsterdam &amp; beyond</span>
 </div>
 
 <div class="venues-grid" id="venues">
 
-  <!-- 1. 4bid Gallery -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <img
-        src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photo_reference=PLACEHOLDER_4BID&key=REPLACE_KEY"
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="4bid Gallery, Amsterdam"
-        loading="lazy"
-      />
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">01</span>
       <div class="venue-name">4bid Gallery</div>
       <div class="venue-location">Overtoom 301, Amsterdam</div>
-      <div class="venue-rating">★★★★★ · Life drawing sessions</div>
+      <div class="venue-rating">Life drawing sessions</div>
     </div>
   </article>
 
-  <!-- 2. Wackers Academie -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <img
-        src=""
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="Wackers Academie, Amsterdam"
-        loading="lazy"
-      />
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">02</span>
       <div class="venue-name">Wackers Academie</div>
       <div class="venue-location">Eerste Helmersstraat 271, Amsterdam</div>
-      <div class="venue-rating">★★★★★ · Classical training academy</div>
+      <div class="venue-rating">Classical training academy</div>
     </div>
   </article>
 
-  <!-- 3. Figura -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <img
-        src=""
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="Figura, Amsterdam"
-        loading="lazy"
-      />
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">03</span>
       <div class="venue-name">Figura</div>
       <div class="venue-location">Chasséstraat 91, Amsterdam</div>
-      <div class="venue-rating">★★★★★ · Dutch Academy of Figurative Sculpture</div>
+      <div class="venue-rating">Dutch Academy of Figurative Sculpture</div>
     </div>
   </article>
 
-  <!-- 4. Arti et Amicitiae -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <img
-        src=""
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="Arti et Amicitiae, Amsterdam"
-        loading="lazy"
-      />
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">04</span>
       <div class="venue-name">Arti et Amicitiae</div>
@@ -424,31 +494,18 @@
     </div>
   </article>
 
-  <!-- 5. Dutch Atelier of Realist Art -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <img
-        src=""
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="Dutch Atelier of Realist Art, Haarlem"
-        loading="lazy"
-      />
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">05</span>
       <div class="venue-name">Dutch Atelier of Realist Art</div>
       <div class="venue-location">Zuider Emmakade 45F, Haarlem</div>
-      <div class="venue-rating">★★★★★ · Classical realist training</div>
+      <div class="venue-rating">Classical realist training</div>
     </div>
   </article>
 
-  <!-- 6. Atelier Groeten van Marc -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <div class="venue-img-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-      </div>
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">06</span>
       <div class="venue-name">Atelier Groeten van Marc</div>
@@ -457,13 +514,8 @@
     </div>
   </article>
 
-  <!-- 7. MK Atelier -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <div class="venue-img-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-      </div>
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">07</span>
       <div class="venue-name">MK Atelier</div>
@@ -472,82 +524,48 @@
     </div>
   </article>
 
-  <!-- 8. Zaal 100 -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <img
-        src=""
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="Zaal 100, Amsterdam"
-        loading="lazy"
-      />
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">08</span>
       <div class="venue-name">Zaal 100</div>
       <div class="venue-location">De Wittenstraat 100, Amsterdam</div>
-      <div class="venue-rating">★★★★ · Community arts centre</div>
+      <div class="venue-rating">Community arts centre</div>
     </div>
   </article>
 
-  <!-- 9. Tetterode -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <img
-        src=""
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="Woonwerkpand Tetterode, Amsterdam"
-        loading="lazy"
-      />
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">09</span>
       <div class="venue-name">Tetterode</div>
       <div class="venue-location">Bilderdijkstraat 165, Amsterdam</div>
-      <div class="venue-rating">Historic live-work complex · Artists' studios</div>
+      <div class="venue-rating">Historic live-work complex</div>
     </div>
   </article>
 
-  <!-- 10. Bastiaan Mol -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <div class="venue-img-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-      </div>
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">10</span>
       <div class="venue-name">Bastiaan Mol</div>
       <div class="venue-location">Amsterdam</div>
-      <div class="venue-rating">Artist's studio · Portraiture &amp; figure</div>
+      <div class="venue-rating">Portraiture &amp; figure</div>
     </div>
   </article>
 
-  <!-- 11. Gouda Cultuurhuis -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <img
-        src=""
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="Gouda Cultuurhuis"
-        loading="lazy"
-      />
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">11</span>
       <div class="venue-name">Gouda Cultuurhuis</div>
       <div class="venue-location">Turfsingel 34, Gouda</div>
-      <div class="venue-rating">★★★★ · Cultural centre</div>
+      <div class="venue-rating">Cultural centre</div>
     </div>
   </article>
 
-  <!-- 12. Jaap de Jonge Photography -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <div class="venue-img-placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-      </div>
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">12</span>
       <div class="venue-name">Jaap de Jonge Photography</div>
@@ -556,57 +574,14 @@
     </div>
   </article>
 
-  <!-- 13. SAKB -->
   <article class="venue-card">
-    <div class="venue-img-wrap">
-      <img
-        src=""
-        onerror="this.parentNode.innerHTML='<div class=\'venue-img-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'1\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><path d=\'m21 15-5-5L5 21\'/></svg></div>'"
-        alt="SAKB, Amstelveen"
-        loading="lazy"
-      />
-    </div>
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <span class="venue-index">13</span>
       <div class="venue-name">SAKB</div>
       <div class="venue-location">Ouderkerkerlaan 15, Amstelveen</div>
-      <div class="venue-rating">★★★★ · Art centre &amp; workshops</div>
+      <div class="venue-rating">Art centre &amp; workshops</div>
     </div>
   </article>
 
 </div><!-- /venues-grid -->
-
-<footer>
-  <div class="name">Chris Dobson — Art Model</div>
-  <div class="links">
-    <a href="https://instagram.com/artmodel_chris" title="Instagram">Instagram</a>
-    <a href="https://patreon.com/modelchris" title="Patreon">Patreon</a>
-    <a href="https://onlyfans.com/modelchris" title="OnlyFans">OnlyFans</a>
-    <a href="https://bsky.app/profile/cspdobson.bsky.social" title="Bluesky">Bluesky</a>
-    <a href="mailto:christopher.dobson14@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/chris-dobson-572004256">LinkedIn</a>
-  </div>
-</footer>
-
-<script>
-  // Lazy-reveal venue cards on scroll
-  const cards = document.querySelectorAll('.venue-card');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.style.opacity = '1';
-        e.target.style.transform = 'translateY(0)';
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.08 });
-
-  cards.forEach((c, i) => {
-    c.style.opacity = '0';
-    c.style.transform = 'translateY(18px)';
-    c.style.transition = `opacity .45s ease ${i * 40}ms, transform .45s ease ${i * 40}ms, background .25s`;
-    io.observe(c);
-  });
-</script>
-</body>
-         </html>
