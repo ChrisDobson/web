@@ -31,6 +31,44 @@
       line-height: 1.7;
     }
 
+    /* ── TOGGLE CONTROLLER ──────────────── */
+    .view-toggle-container {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .toggle-btn {
+      background: transparent;
+      border: 1px solid var(--rule);
+      color: var(--muted);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-btn.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: var(--paper);
+    }
+
+    /* ── B&W GLOBAL FILTERS ─────────────── */
+    body.bw-mode .hero-photo,
+    body.bw-mode .venue-img-wrap img,
+    body.bw-mode .venue-img-placeholder {
+      filter: grayscale(100%) contrast(1.05) !important;
+    }
+
+    body.bw-mode .social-card.instagram { background: linear-gradient(135deg, #444, #111); }
+    body.bw-mode .social-card.onlyfans  { background: linear-gradient(135deg, #555, #222); }
+    body.bw-mode .social-card.patreon   { background: linear-gradient(135deg, #333, #000); }
+    body.bw-mode .social-card.bluesky   { background: linear-gradient(135deg, #666, #333); }
+
     /* ── HERO ─────────────────────────── */
     header {
       width: 100%;
@@ -42,6 +80,7 @@
       width: 100%;
       height: auto;
       display: block;
+      transition: filter 0.3s ease;
     }
 
     .hero-content {
@@ -142,6 +181,7 @@
       object-fit: cover;
       filter: sepia(15%) contrast(1.02);
       display: block;
+      transition: filter 0.3s ease;
     }
 
     .venue-img-placeholder {
@@ -151,6 +191,7 @@
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, var(--warm) 0%, var(--rule) 100%);
+      transition: filter 0.3s ease;
     }
 
     .venue-img-placeholder svg { opacity: .2; width: 28px; height: 28px; }
@@ -267,6 +308,7 @@
       min-height: 90px;
       position: relative;
       overflow: hidden;
+      transition: background 0.3s ease;
     }
 
     .social-card::after {
@@ -346,7 +388,6 @@
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero-content">
   <h1>Model<br/><em>Chris</em></h1>
   <p class="hero-sub">
@@ -354,13 +395,17 @@
     In September of that year, I began working as a model for art classes.
     What started as a paid hobby has turned into my full-time job.
   </p>
+  
+  <div class="view-toggle-container">
+    <button id="colorBtn" class="toggle-btn active" onclick="setViewMode('color')">Color</button>
+    <button id="bwBtn" class="toggle-btn" onclick="setViewMode('bw')">B&W</button>
+  </div>
 </div>
 
 <header>
   <img class="hero-photo" src="chris.jpg" alt="Chris Dobson, art model" />
 </header>
 
-<!-- INTRO -->
 <div class="intro-text">
   <h2>Modelling as a meditative act</h2>
   <p>
@@ -370,9 +415,8 @@
   </p>
 </div>
 
-<!-- SOCIAL -->
 <div class="social-section">
-  <div class="section-label">Follow &amp; support</div>
+  <div class="section-label">Follow & support</div>
   <div class="social-grid">
 
     <a class="social-card instagram" href="https://instagram.com/artmodel_chris" target="_blank" rel="noopener">
@@ -399,10 +443,9 @@
 </div>
 
 
-<!-- PRESS -->
 <div class="section-header">
   <h2>As featured in</h2>
-  <span>Press &amp; media</span>
+  <span>Press & media</span>
 </div>
 
 <div class="press-grid">
@@ -422,7 +465,7 @@
     <div class="press-text">
       <div class="press-type">Podcast · Spotify</div>
       <div class="press-name">Bad Chat</div>
-      <div class="press-desc">With Greg James &amp; Alice Levine.</div>
+      <div class="press-desc">With Greg James & Alice Levine.</div>
     </div>
     <div class="press-arrow">›</div>
   </a>
@@ -440,35 +483,34 @@
 </div>
 
 
-<!-- VENUES -->
 <div class="section-header">
   <h2>Where I have modelled</h2>
-  <span>Amsterdam &amp; beyond</span>
+  <span>Amsterdam & beyond</span>
 </div>
 
 <div class="venues-grid" id="venues">
 
   <a class="venue-card" href="https://4bidgallery.wordpress.com/" target="_blank" rel="noopener">
-  <div class="venue-img-wrap">
-    <img src="4bid.png" alt="4bid gallery lol" loading="lazy" />
-  </div>
-  <div class="venue-body">
-    <div class="venue-name">4bid Gallery</div>
-    <div class="venue-location">Overtoom 301, Amsterdam</div>
-    <div class="venue-rating">Life drawing sessions</div>
-  </div>
-</a>
+    <div class="venue-img-wrap">
+      <img src="4bid.png" alt="4bid gallery" loading="lazy" />
+    </div>
+    <div class="venue-body">
+      <div class="venue-name">4bid Gallery</div>
+      <div class="venue-location">Overtoom 301, Amsterdam</div>
+      <div class="venue-rating">Life drawing sessions</div>
+    </div>
+  </a>
 
-<a class="venue-card" href="https://www.arti.nl/" target="_blank" rel="noopener">
-  <div class="venue-img-wrap">
-    <img src="arti.jpg" alt="Arti et Amicitiae logo" loading="lazy" />
-  </div>
-  <div class="venue-body">
-    <div class="venue-name">Arti et Amicitiae</div>
-    <div class="venue-location">Rokin 112, Amsterdam</div>
-    <div class="venue-rating">Historic artists' society · Est. 1839</div>
-  </div>
-</a>
+  <a class="venue-card" href="https://www.arti.nl/" target="_blank" rel="noopener">
+    <div class="venue-img-wrap">
+      <img src="arti.jpg" alt="Arti et Amicitiae" loading="lazy" />
+    </div>
+    <div class="venue-body">
+      <div class="venue-name">Arti et Amicitiae</div>
+      <div class="venue-location">Rokin 112, Amsterdam</div>
+      <div class="venue-rating">Historic artists' society · Est. 1839</div>
+    </div>
+  </a>
 
   <a class="venue-card" href="https://groetenvanmarc.nl/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
@@ -484,7 +526,16 @@
     <div class="venue-body">
       <div class="venue-name">Bastiaan Mol</div>
       <div class="venue-location">Amsterdam</div>
-      <div class="venue-rating">Portraiture &amp; figure</div>
+      <div class="venue-rating">Portraiture & figure</div>
+    </div>
+  </a>
+
+  <a class="venue-card" href="https://www.garenspinnerij.nl/" target="_blank" rel="noopener">
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
+    <div class="venue-body">
+      <div class="venue-name">Cultuurhuis Garenspinnerij</div>
+      <div class="venue-location">Turfsingel 34, Gouda</div>
+      <div class="venue-rating">Cultural centre</div>
     </div>
   </a>
 
@@ -506,21 +557,12 @@
     </div>
   </a>
 
-  <a class="venue-card" href="https://www.cultuurhuisgouda.nl/" target="_blank" rel="noopener">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <div class="venue-name">Gouda Cultuurhuis</div>
-      <div class="venue-location">Turfsingel 34, Gouda</div>
-      <div class="venue-rating">Cultural centre</div>
-    </div>
-  </a>
-
   <a class="venue-card" href="https://www.jaapdejonge.nl/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
       <div class="venue-name">Jaap de Jonge Photography</div>
       <div class="venue-location">Amsterdam</div>
-      <div class="venue-rating">Photography studio · Figure &amp; portrait</div>
+      <div class="venue-rating">Photography studio · Figure & portrait</div>
     </div>
   </a>
 
@@ -529,7 +571,7 @@
     <div class="venue-body">
       <div class="venue-name">MK Atelier</div>
       <div class="venue-location">Amsterdam</div>
-      <div class="venue-rating">Drawing &amp; painting atelier</div>
+      <div class="venue-rating">Drawing & painting atelier</div>
     </div>
   </a>
 
@@ -538,7 +580,7 @@
     <div class="venue-body">
       <div class="venue-name">SAKB</div>
       <div class="venue-location">Ouderkerkerlaan 15, Amstelveen</div>
-      <div class="venue-rating">Art centre &amp; workshops</div>
+      <div class="venue-rating">Art centre & workshops</div>
     </div>
   </a>
 
@@ -553,29 +595,4 @@
 
   <a class="venue-card" href="https://wackersacademie.nl/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <div class="venue-name">Wackers Academie</div>
-      <div class="venue-location">Eerste Helmersstraat 271, Amsterdam</div>
-      <div class="venue-rating">Classical training academy</div>
-    </div>
-  </a>
-
-  <a class="venue-card" href="https://zaal100.nl/" target="_blank" rel="noopener">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <div class="venue-name">Zaal 100</div>
-      <div class="venue-location">De Wittenstraat 100, Amsterdam</div>
-      <div class="venue-rating">Community arts centre</div>
-    </div>
-  </a>
-
-</div><!-- /venues-grid -->
-
-<!-- FOOTER -->
-<footer>
-  <p class="footer-eyebrow">Amsterdam · Art Model</p>
-  <div class="name">Chris Dobson</div>
-</footer>
-
-</body>
-</html>
+  
