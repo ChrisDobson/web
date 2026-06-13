@@ -34,15 +34,13 @@
     /* ── HERO ─────────────────────────── */
     header {
       width: 100%;
-      aspect-ratio: 3/4;
       overflow: hidden;
+      border-bottom: 1px solid var(--rule);
     }
 
     .hero-photo {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
+      height: auto;
       display: block;
     }
 
@@ -129,6 +127,13 @@
       overflow: hidden;
       background: var(--paper);
       display: flex;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s ease;
+    }
+
+    .venue-card:hover {
+      background: #f2ede6;
     }
 
     .venue-img-wrap {
@@ -164,15 +169,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-    }
-
-    .venue-index {
-      font-size: 9px;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      display: block;
-      margin-bottom: .2rem;
     }
 
     .venue-name {
@@ -328,7 +324,6 @@
 
     /* ── DESKTOP UPGRADE ─────────────── */
     @media (min-width: 640px) {
-      header { aspect-ratio: 16/7; }
       .hero-content { padding: 3rem 3rem 3rem; }
       h1 { font-size: clamp(4rem, 8vw, 7rem); }
       .dark-band { padding: 2.5rem 3rem; }
@@ -352,10 +347,6 @@
 <body>
 
 <!-- HERO -->
-<header>
-  <img class="hero-photo" src="light7.jpeg" alt="Chris Dobson, art model" />
-</header>
-
 <div class="hero-content">
   <p class="eyebrow">Amsterdam · Art Model</p>
   <h1>Model<br/><em>Chris</em></h1>
@@ -365,6 +356,10 @@
     What started as a paid hobby has turned into my full-time job.
   </p>
 </div>
+
+<header>
+  <img class="hero-photo" src="light7.jpeg" alt="Chris Dobson, art model" />
+</header>
 
 <!-- INTRO -->
 <div class="intro-text">
@@ -454,134 +449,122 @@
 
 <div class="venues-grid" id="venues">
 
-  <article class="venue-card">
+  <a class="venue-card" href="https://www.4bidgallery.com/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
-      <span class="venue-index">01</span>
       <div class="venue-name">4bid Gallery</div>
       <div class="venue-location">Overtoom 301, Amsterdam</div>
       <div class="venue-rating">Life drawing sessions</div>
     </div>
-  </article>
+  </a>
 
-  <article class="venue-card">
+  <a class="venue-card" href="https://www.arti.nl/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
-      <span class="venue-index">02</span>
-      <div class="venue-name">Wackers Academie</div>
-      <div class="venue-location">Eerste Helmersstraat 271, Amsterdam</div>
-      <div class="venue-rating">Classical training academy</div>
-    </div>
-  </article>
-
-  <article class="venue-card">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <span class="venue-index">03</span>
-      <div class="venue-name">Figura</div>
-      <div class="venue-location">Chasséstraat 91, Amsterdam</div>
-      <div class="venue-rating">Dutch Academy of Figurative Sculpture</div>
-    </div>
-  </article>
-
-  <article class="venue-card">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <span class="venue-index">04</span>
       <div class="venue-name">Arti et Amicitiae</div>
       <div class="venue-location">Spui 1, Amsterdam</div>
       <div class="venue-rating">Historic artists' society · Est. 1839</div>
     </div>
-  </article>
+  </a>
 
-  <article class="venue-card">
+  <a class="venue-card" href="https://groetenvanmarc.nl/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
-      <span class="venue-index">05</span>
-      <div class="venue-name">Dutch Atelier of Realist Art</div>
-      <div class="venue-location">Zuider Emmakade 45F, Haarlem</div>
-      <div class="venue-rating">Classical realist training</div>
-    </div>
-  </article>
-
-  <article class="venue-card">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <span class="venue-index">06</span>
       <div class="venue-name">Atelier Groeten van Marc</div>
       <div class="venue-location">Amsterdam</div>
       <div class="venue-rating">Private atelier · Figure drawing</div>
     </div>
-  </article>
+  </a>
 
-  <article class="venue-card">
+  <a class="venue-card" href="https://www.bastiaanmol-maleart.nl/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
-      <span class="venue-index">07</span>
-      <div class="venue-name">MK Atelier</div>
-      <div class="venue-location">Amsterdam</div>
-      <div class="venue-rating">Drawing &amp; painting atelier</div>
-    </div>
-  </article>
-
-  <article class="venue-card">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <span class="venue-index">08</span>
-      <div class="venue-name">Zaal 100</div>
-      <div class="venue-location">De Wittenstraat 100, Amsterdam</div>
-      <div class="venue-rating">Community arts centre</div>
-    </div>
-  </article>
-
-  <article class="venue-card">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <span class="venue-index">09</span>
-      <div class="venue-name">Tetterode</div>
-      <div class="venue-location">Bilderdijkstraat 165, Amsterdam</div>
-      <div class="venue-rating">Historic live-work complex</div>
-    </div>
-  </article>
-
-  <article class="venue-card">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-    <div class="venue-body">
-      <span class="venue-index">10</span>
       <div class="venue-name">Bastiaan Mol</div>
       <div class="venue-location">Amsterdam</div>
       <div class="venue-rating">Portraiture &amp; figure</div>
     </div>
-  </article>
+  </a>
 
-  <article class="venue-card">
+  <a class="venue-card" href="https://www.dutchatelierofrealistart.com/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
-      <span class="venue-index">11</span>
+      <div class="venue-name">Dutch Atelier of Realist Art</div>
+      <div class="venue-location">Zuider Emmakade 45F, Haarlem</div>
+      <div class="venue-rating">Classical realist training</div>
+    </div>
+  </a>
+
+  <a class="venue-card" href="https://www.figura-sculpture.com/" target="_blank" rel="noopener">
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
+    <div class="venue-body">
+      <div class="venue-name">Figura</div>
+      <div class="venue-location">Chasséstraat 91, Amsterdam</div>
+      <div class="venue-rating">Dutch Academy of Figurative Sculpture</div>
+    </div>
+  </a>
+
+  <a class="venue-card" href="https://www.cultuurhuisgouda.nl/" target="_blank" rel="noopener">
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
+    <div class="venue-body">
       <div class="venue-name">Gouda Cultuurhuis</div>
       <div class="venue-location">Turfsingel 34, Gouda</div>
       <div class="venue-rating">Cultural centre</div>
     </div>
-  </article>
+  </a>
 
-  <article class="venue-card">
+  <a class="venue-card" href="https://www.jaapdejonge.nl/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
-      <span class="venue-index">12</span>
       <div class="venue-name">Jaap de Jonge Photography</div>
       <div class="venue-location">Amsterdam</div>
       <div class="venue-rating">Photography studio · Figure &amp; portrait</div>
     </div>
-  </article>
+  </a>
 
-  <article class="venue-card">
+  <a class="venue-card" href="https://mkatelier.nl/" target="_blank" rel="noopener">
     <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
     <div class="venue-body">
-      <span class="venue-index">13</span>
+      <div class="venue-name">MK Atelier</div>
+      <div class="venue-location">Amsterdam</div>
+      <div class="venue-rating">Drawing &amp; painting atelier</div>
+    </div>
+  </a>
+
+  <a class="venue-card" href="https://sakb.nl/" target="_blank" rel="noopener">
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
+    <div class="venue-body">
       <div class="venue-name">SAKB</div>
       <div class="venue-location">Ouderkerkerlaan 15, Amstelveen</div>
       <div class="venue-rating">Art centre &amp; workshops</div>
     </div>
-  </article>
+  </a>
+
+  <a class="venue-card" href="https://www.tetterode.nl/" target="_blank" rel="noopener">
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
+    <div class="venue-body">
+      <div class="venue-name">Tetterode</div>
+      <div class="venue-location">Bilderdijkstraat 165, Amsterdam</div>
+      <div class="venue-rating">Historic live-work complex</div>
+    </div>
+  </a>
+
+  <a class="venue-card" href="https://wackersacademie.nl/" target="_blank" rel="noopener">
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
+    <div class="venue-body">
+      <div class="venue-name">Wackers Academie</div>
+      <div class="venue-location">Eerste Helmersstraat 271, Amsterdam</div>
+      <div class="venue-rating">Classical training academy</div>
+    </div>
+  </a>
+
+  <a class="venue-card" href="https://zaal100.nl/" target="_blank" rel="noopener">
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
+    <div class="venue-body">
+      <div class="venue-name">Zaal 100</div>
+      <div class="venue-location">De Wittenstraat 100, Amsterdam</div>
+      <div class="venue-rating">Community arts centre</div>
+    </div>
+  </a>
 
 </div><!-- /venues-grid -->
+
