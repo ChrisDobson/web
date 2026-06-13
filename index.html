@@ -20,6 +20,16 @@
       --dark:    #111009;
     }
 
+    /* ── DARK THEME VARIABLES ───────────── */
+    body.dark-mode {
+      --ink:     #f7f3ee;
+      --paper:   #151410;
+      --warm:    #2d2924;
+      --accent:  #d2a379;
+      --muted:   #a39891;
+      --rule:    #3d3730;
+    }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -29,6 +39,7 @@
       font-weight: 300;
       font-size: 16px;
       line-height: 1.7;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     /* ── TOGGLE CONTROLLER ──────────────── */
@@ -57,17 +68,17 @@
       color: var(--paper);
     }
 
-    /* ── B&W GLOBAL FILTERS ─────────────── */
-    body.bw-mode .hero-photo,
-    body.bw-mode .venue-img-wrap img,
-    body.bw-mode .venue-img-placeholder {
-      filter: grayscale(100%) contrast(1.05) !important;
+    /* ── DARK MODE CARD SPECIFICS ───────── */
+    body.dark-mode .venue-card:hover {
+      background: #1e1c17;
     }
-
-    body.bw-mode .social-card.instagram { background: linear-gradient(135deg, #444, #111); }
-    body.bw-mode .social-card.onlyfans  { background: linear-gradient(135deg, #555, #222); }
-    body.bw-mode .social-card.patreon   { background: linear-gradient(135deg, #333, #000); }
-    body.bw-mode .social-card.bluesky   { background: linear-gradient(135deg, #666, #333); }
+    
+    body.dark-mode .press-card {
+      background: var(--paper);
+    }
+    body.dark-mode .press-card:active {
+      background: var(--warm);
+    }
 
     /* ── HERO ─────────────────────────── */
     header {
@@ -80,7 +91,6 @@
       width: 100%;
       height: auto;
       display: block;
-      transition: filter 0.3s ease;
     }
 
     .hero-content {
@@ -181,7 +191,6 @@
       object-fit: cover;
       filter: sepia(15%) contrast(1.02);
       display: block;
-      transition: filter 0.3s ease;
     }
 
     .venue-img-placeholder {
@@ -191,7 +200,6 @@
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, var(--warm) 0%, var(--rule) 100%);
-      transition: filter 0.3s ease;
     }
 
     .venue-img-placeholder svg { opacity: .2; width: 28px; height: 28px; }
@@ -283,6 +291,10 @@
       padding: 2.5rem 1.5rem;
     }
 
+    body.dark-mode .social-section {
+      background: #000000;
+    }
+
     .social-section .section-label {
       font-size: 10px;
       letter-spacing: .24em;
@@ -308,7 +320,6 @@
       min-height: 90px;
       position: relative;
       overflow: hidden;
-      transition: background 0.3s ease;
     }
 
     .social-card::after {
@@ -347,6 +358,10 @@
       text-align: center;
     }
 
+    body.dark-mode footer {
+      background: #000000;
+    }
+
     .footer-eyebrow {
       font-size: 10px;
       font-weight: 400;
@@ -375,7 +390,8 @@
       .venue-card { flex-direction: column; }
       .venue-img-wrap { width: 100%; min-width: unset; aspect-ratio: 4/3; }
       .press-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-      .press-card { border-right: 1px solid var(--rule); }
+      .press-card { border-right: 1px solid var(--rule); border-bottom: none; }
+      body.dark-mode .press-card { border-right: 1px solid var(--rule); }
       .social-section { padding: 3rem; }
       .social-grid { grid-template-columns: repeat(4, 1fr); }
       footer { padding: 3rem 3rem; }
@@ -388,6 +404,7 @@
 </head>
 <body>
 
+<!-- HERO -->
 <div class="hero-content">
   <h1>Model<br/><em>Chris</em></h1>
   <p class="hero-sub">
@@ -396,9 +413,10 @@
     What started as a paid hobby has turned into my full-time job.
   </p>
   
+  <!-- Light & Dark Toggle Controller -->
   <div class="view-toggle-container">
-    <button id="colorBtn" class="toggle-btn active" onclick="setViewMode('color')">Color</button>
-    <button id="bwBtn" class="toggle-btn" onclick="setViewMode('bw')">B&W</button>
+    <button id="lightBtn" class="toggle-btn active" onclick="setViewMode('light')">Light</button>
+    <button id="darkBtn" class="toggle-btn" onclick="setViewMode('dark')">Dark</button>
   </div>
 </div>
 
@@ -406,6 +424,7 @@
   <img class="hero-photo" src="chris.jpg" alt="Chris Dobson, art model" />
 </header>
 
+<!-- INTRO -->
 <div class="intro-text">
   <h2>Modelling as a meditative act</h2>
   <p>
@@ -415,6 +434,7 @@
   </p>
 </div>
 
+<!-- SOCIAL -->
 <div class="social-section">
   <div class="section-label">Follow & support</div>
   <div class="social-grid">
@@ -443,6 +463,7 @@
 </div>
 
 
+<!-- PRESS -->
 <div class="section-header">
   <h2>As featured in</h2>
   <span>Press & media</span>
@@ -483,6 +504,7 @@
 </div>
 
 
+<!-- VENUES -->
 <div class="section-header">
   <h2>Where I have modelled</h2>
   <span>Amsterdam & beyond</span>
@@ -594,5 +616,4 @@
   </a>
 
   <a class="venue-card" href="https://wackersacademie.nl/" target="_blank" rel="noopener">
-    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div></div>
-  
+    <div class="venue-img-wrap"><div class="venue-img-placeholder"><svg viewBox="0 0 24 24" fill="none" 
