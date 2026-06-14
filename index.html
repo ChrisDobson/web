@@ -12,7 +12,7 @@
 
     :root {
       --ink:     #1a1612;
-      --paper:   #ffffff; /* True White */
+      --paper:   #ffffff;
       --warm:    #f5eee6;
       --accent:  #8b5e3c;
       --muted:   #756a62;
@@ -20,16 +20,13 @@
       --dark:    #000000;
     }
 
-    /* ── DARK THEME VARIABLES ───────────── */
     body.dark-mode {
       --ink:     #f7f3ee;
-      --paper:   #000000; /* True Black */
+      --paper:   #000000;
       --warm:    #1a1815;
       --accent:  #d2a379;
       --muted:   #a39891;
       --rule:    #2a2622;
-      
-      /* Forces everything (images, backgrounds, text, emojis) into black & white */
       filter: grayscale(100%);
     }
 
@@ -45,14 +42,13 @@
       transition: background 0.2s ease, color 0.2s ease, filter 0.2s ease;
     }
 
-    /* ── FLOATING TOP BAR FOR CONTROLS ─── */
     .theme-top-bar {
       width: 100%;
       padding: 1.5rem 1.5rem 0.5rem 1.5rem;
       display: flex;
       justify-content: flex-start;
       position: relative;
-      z-index: 99999; /* Forces control panel above everything else */
+      z-index: 99999;
     }
 
     .view-toggle-container {
@@ -61,26 +57,25 @@
     }
 
     .toggle-btn {
-      background: transparent;
-      border: 1px solid var(--rule);
-      color: var(--muted);
+      background: var(--ink);
+      border: 1px solid var(--ink);
+      color: var(--paper);
       font-family: 'DM Sans', sans-serif;
       font-size: 10px;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       padding: 0.5rem 1rem;
       cursor: pointer;
-      pointer-events: auto; /* Explicitly forces item to receive clicks */
+      pointer-events: auto;
       transition: all 0.2s ease;
     }
 
     .toggle-btn.active {
-      background: var(--ink);
-      border-color: var(--ink);
-      color: var(--paper);
+      background: transparent;
+      border-color: var(--rule);
+      color: var(--muted);
     }
 
-    /* ── HERO IMAGE & CREDIT ────────────── */
     header {
       width: 100%;
       overflow: hidden;
@@ -136,7 +131,6 @@
       max-width: 36ch;
     }
 
-    /* ── INTRO ───────────────────────── */
     .intro-text {
       padding: 2.5rem 1.5rem;
       border-bottom: 1px solid var(--rule);
@@ -152,7 +146,6 @@
 
     .intro-text p { color: var(--muted); font-size: .93rem; }
 
-    /* ── SECTION HEADERS ─────────────── */
     .section-header {
       padding: 1.6rem 1.5rem 1.2rem;
       border-bottom: 1px solid var(--rule);
@@ -172,7 +165,6 @@
       color: var(--muted);
     }
 
-    /* ── VENUE CARDS ─────────────────── */
     .venues-grid {
       display: flex;
       flex-direction: column;
@@ -213,7 +205,6 @@
       filter: brightness(0.9) contrast(1.1);
     }
 
-    /* ── PRESS CARDS ─────────────────── */
     .press-grid { display: flex; flex-direction: column; }
 
     .press-card {
@@ -267,7 +258,6 @@
 
     .press-arrow { color: var(--rule); font-size: 1.3rem; flex-shrink: 0; }
 
-    /* ── SOCIAL SECTION ──────────────── */
     .social-section {
       background: #000000;
       padding: 2.5rem 1.5rem;
@@ -333,7 +323,6 @@
       line-height: 1.2;
     }
 
-    /* ── FOOTER ──────────────────────── */
     footer {
       padding: 2.5rem 1.5rem;
       background: #000000;
@@ -362,7 +351,15 @@
       letter-spacing: .05em;
     }
 
-    /* ── DESKTOP UPGRADE ─────────────── */
+    footer .name a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    footer .name a:hover {
+      text-decoration: underline;
+    }
+
     @media (min-width: 640px) {
       .theme-top-bar { padding: 2rem 3rem 0.5rem 3rem; }
       .hero-content { padding: 2.5rem 3rem 3rem; }
@@ -388,7 +385,6 @@
 </head>
 <body>
 
-<!-- ISOLATED THEME TOP BAR BARRIER -->
 <div class="theme-top-bar">
   <div class="view-toggle-container">
     <button id="lightBtn" class="toggle-btn active" onclick="setViewMode('light')">Light</button>
@@ -396,7 +392,6 @@
   </div>
 </div>
 
-<!-- HERO MAIN CONTENT -->
 <div class="hero-content">
   <h1>Model<br/><em>Chris</em></h1>
   <p class="hero-sub">
@@ -406,7 +401,6 @@
   </p>
 </div>
 
-<!-- HERO IMAGE & CREDIT -->
 <header>
   <img class="hero-photo" src="chris.jpg" alt="A photo of a man's face, upside down. He is looking at the camera." />
 </header>
@@ -414,7 +408,6 @@
   Photo by <a href="https://www.instagram.com/modelpascal" target="_blank" rel="noopener">@modelpascal</a>
 </div>
 
-<!-- INTRO -->
 <div class="intro-text">
   <h2>Modelling as a meditative act</h2>
   <p>
@@ -424,7 +417,6 @@
   </p>
 </div>
 
-<!-- SOCIAL -->
 <div class="social-section">
   <div class="section-label">Follow & support</div>
   <div class="social-grid">
@@ -452,8 +444,6 @@
   </div>
 </div>
 
-
-<!-- PRESS -->
 <div class="section-header">
   <h2>As featured in</h2>
   <span>Press & media</span>
@@ -493,8 +483,6 @@
 
 </div>
 
-
-<!-- VENUES -->
 <div class="section-header">
   <h2>Where I have modelled</h2>
   <span>Amsterdam & beyond</span>
@@ -553,7 +541,7 @@
     <div class="venue-body">
       <div class="venue-name">Cultuurhuis Garenspinnerij</div>
       <div class="venue-location">Turfsingel 34, Gouda</div>
-      <div class="venue-rating">Cultural centre · Model painting </div>
+      <div class="venue-rating">Cultural centre · Model painting</div>
     </div>
   </a>
 
@@ -645,31 +633,26 @@
     </div>
   </a>
 
-</div><!-- /venues-grid -->
+</div>
 
-<!-- FOOTER -->
 <footer>
   <p class="footer-eyebrow">Amsterdam · Model</p>
-  <div class="name">Christopher Stuart Paul Dobson</div>
+  <div class="name">
+    <a href="https://chrisdobson.github.io/web/page" target="_blank" rel="noopener">Christopher Stuart Paul Dobson</a>
+  </div>
 </footer>
 
-<!-- BULLETPROOF ENGINE TOGGLE MECHANISM -->
 <script>
   function setViewMode(mode) {
-    const body = document.body;
-    const lightBtn = document.getElementById('lightBtn');
-    const darkBtn = document.getElementById('darkBtn');
-
     if (mode === 'dark') {
-      body.classList.add('dark-mode');
-      if(darkBtn) darkBtn.classList.add('active');
-      if(lightBtn) lightBtn.classList.remove('active');
+      document.body.classList.add('dark-mode');
     } else {
-      body.classList.remove('dark-mode');
-      if(lightBtn) lightBtn.classList.add('active');
-      if(darkBtn) darkBtn.classList.remove('active');
+      document.body.classList.remove('dark-mode');
     }
+    document.getElementById('lightBtn').classList.toggle('active', mode === 'light');
+    document.getElementById('darkBtn').classList.toggle('active', mode === 'dark');
   }
 </script>
+
 </body>
 </html>
