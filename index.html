@@ -328,6 +328,7 @@
       background: #000000;
       border-top: 1px solid rgba(255,255,255,.08);
       text-align: center;
+      cursor: pointer;
     }
 
     body.dark-mode footer {
@@ -351,12 +352,7 @@
       letter-spacing: .05em;
     }
 
-    footer .name a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    footer .name a:hover {
+    footer:hover .name {
       text-decoration: underline;
     }
 
@@ -402,7 +398,9 @@
 </div>
 
 <header>
-  <img class="hero-photo" src="chris.jpg" alt="A photo of a man's face, upside down. He is looking at the camera." />
+  <a href="https://patreon.com/modelchris" target="_blank" rel="noopener">
+    <img class="hero-photo" src="chris.jpg" alt="A photo of a man's face, upside down. He is looking at the camera." />
+  </a>
 </header>
 <div class="photo-credit">
   Photo by <a href="https://www.instagram.com/modelpascal" target="_blank" rel="noopener">@modelpascal</a>
@@ -635,11 +633,9 @@
 
 </div>
 
-<footer>
+<footer onclick="window.open('https://chrisdobson.github.io/web/page','_blank')">
   <p class="footer-eyebrow">Amsterdam · Model</p>
-  <div class="name">
-    <a href="https://chrisdobson.github.io/web/page" target="_blank" rel="noopener">Click here to see some of the artworks I have been turned into!</a>
-  </div>
+  <div class="name">Click here to see some of the artworks I have been turned into!</div>
 </footer>
 
 <script>
