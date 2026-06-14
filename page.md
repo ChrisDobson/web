@@ -1,4 +1,4 @@
-# [Model Chris — Amsterdam](https://chrisdobson.github.io/web/page)
+# [Model Chris — Amsterdam](https://chrisdobson.github.io/web)
 
 ## Artwork featuring me 🎨
 
