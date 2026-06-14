@@ -10,7 +10,8 @@ One of the most rewarding aspects of my work is seeing what artists create. Belo
 
 <img
 src="art/painting.jpg"
-alt="A painting of Chris by Bastiaan Mol" />
+alt="A painting of Chris by Bastiaan Mol"
+  width="500" />
 
 <img
 src="art/painting2.jpg"
