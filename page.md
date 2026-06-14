@@ -1,8 +1,8 @@
 # [Model Chris — Amsterdam](https://chrisdobson.github.io/web/page)
 
-## Artwork featuring me
+## Artwork featuring me 🎨
 
-One of the most rewarding aspects of my work is seeing what artists create. Below are some examples.
+One of the most rewarding aspects of my work is seeing what artists create. Below are some examples. Warning: some are NSFW! 🔞
 
 ---
 
@@ -13,19 +13,27 @@ src="art/painting.jpg"
 alt="A painting of Chris by Bastiaan Mol"
   width="500" />
 
-<img
-src="art/painting2.jpg"
-alt="A painting of Chris by Bastiaan Mol" />
+  <img
+src="art/painting4.jpg"
+alt="A painting of Chris by Bastiaan Mol"
+    width="500"/>
 
 <img
 src="art/painting3.jpg"
-alt="A painting of Chris by Bastiaan Mol" />
+alt="A painting of Chris by Bastiaan Mol"
+  width="500"/>
 
 <img
-src="art/painting4.jpg"
-alt="A painting of Chris by Bastiaan Mol" />
+src="art/painting2.jpg"
+alt="A painting of Chris by Bastiaan Mol"
+  width="500"/>
 
+### [Proxodus Red Carpet](https://www.patreon.com/Proxodusredcarpet)
 
+<img
+src="art/digital.jpg"
+alt="A painting of Chris by Proxodus Red Carpet"
+  width="500" />
 
 ---
 
