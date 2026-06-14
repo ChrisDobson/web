@@ -9,7 +9,19 @@ One of the most rewarding aspects of my work is seeing what artists create. Belo
 ### [Bastiaan Mol](https://www.bastiaanmol-maleart.nl/)
 
 <img
-src="art/painting1.jpg"
+src="art/painting.jpg"
+alt="A painting of Chris by Bastiaan Mol" />
+
+<img
+src="art/painting2.jpg"
+alt="A painting of Chris by Bastiaan Mol" />
+
+<img
+src="art/painting3.jpg"
+alt="A painting of Chris by Bastiaan Mol" />
+
+<img
+src="art/painting4.jpg"
 alt="A painting of Chris by Bastiaan Mol" />
 
 
