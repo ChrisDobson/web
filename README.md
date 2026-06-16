@@ -1,0 +1,1 @@
+I am Model Chris and I created this website to showcase my work as an art model in Amsterdam. It's a really fun job!
