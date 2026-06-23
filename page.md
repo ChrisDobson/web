@@ -36,13 +36,27 @@ If you like this picture of me by Proxodus Red Carpet, [there are even more artw
 
 ---
 
-## [Support my work](https://paypal.me/cspdobson)
+## Want to draw me?
 
-If you enjoy following my modelling journey and would like to support me financially, I would be very grateful. You can make a contribution via PayPal:
+On this page, I will share all upcoming open life drawing sessions where I will be the model:
 
-**[Support me on PayPal](https://paypal.me/cspdobson)**
+[Anytime: Through YourCityBuddy, you can hire me as your personal tour guide in Amsterdam! This includes the option to draw me.](https://www.yourcitybuddy.com/en/experiences/amsterdam-an-art-models-guide-to-amsterdam)
+
+[29 June: Doka, Wibautstraat 150, 1091 GR, Amsterdam.](https://www.volkshotel.nl/en/weekly/hotel/life-drawing-session/)
+
+[28 July: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301/)
+
+[1 September: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301/)
+
+[6 September: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301/)
 
 ---
+
+## Support my work
+
+If you enjoy following my modelling journey and would like to support me financially, I would be very grateful!
+
+**[You can make a contribution via PayPal.](https://www.paypal.com/paypalme/cspdobson)**
 
 ## Follow me
 
