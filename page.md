@@ -36,7 +36,7 @@ If you like this picture of me by Proxodus Red Carpet, [there are even more artw
 
 ---
 
-## Want to draw me?
+## Draw me ✍️
 
 On this page, I will share all upcoming open life drawing sessions where I will be the model:
 
@@ -52,13 +52,13 @@ On this page, I will share all upcoming open life drawing sessions where I will 
 
 ---
 
-## Support my work
+## Support me ❤️
 
 If you enjoy following my modelling journey and would like to support me financially, I would be very grateful!
 
 **[You can make a contribution via PayPal.](https://www.paypal.com/paypalme/cspdobson)**
 
-## Follow me
+## Follow me 👀
 
 - Bluesky: [@cspdobson](https://bsky.app/profile/cspdobson.bsky.social)
 - Instagram: [@artmodel_chris](https://instagram.com/artmodel_chris)
