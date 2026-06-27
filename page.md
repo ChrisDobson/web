@@ -13,15 +13,19 @@ One of the most rewarding aspects of my job is seeing what artists create. Here 
 </a>
 
 <a href="https://www.bastiaanmol-maleart.nl/" target="_blank" rel="noopener">
-<img src="art/painting4.jpg" alt="A painting of Chris by Bastiaan Mol" width="500" />
-</a>
-
-<a href="https://www.bastiaanmol-maleart.nl/" target="_blank" rel="noopener">
 <img src="art/painting3.jpg" alt="A painting of Chris by Bastiaan Mol" width="500" />
 </a>
 
 <a href="https://www.bastiaanmol-maleart.nl/" target="_blank" rel="noopener">
 <img src="art/painting5.jpg" alt="A painting of Chris by Bastiaan Mol" width="500" />
+</a>
+
+<a href="https://www.bastiaanmol-maleart.nl/" target="_blank" rel="noopener">
+<img src="art/painting6.jpg" alt="A painting of Chris by Bastiaan Mol" width="500" />
+</a>
+
+<a href="https://www.bastiaanmol-maleart.nl/" target="_blank" rel="noopener">
+<img src="art/painting4.jpg" alt="A painting of Chris by Bastiaan Mol" width="500" />
 </a>
 
 See Bastiaan's website for even more of his art - [including a painting of me that is so NSFW, I dared not include it on my website! 🔥](https://www.bastiaanmol-maleart.nl/)
