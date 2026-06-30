@@ -46,8 +46,6 @@ On this page, I will share all upcoming open life drawing sessions where I will 
 
 [Anytime: Through YourCityBuddy, you can hire me as your personal tour guide in Amsterdam! This includes the option to draw me.](https://www.yourcitybuddy.com/en/experiences/amsterdam-an-art-models-guide-to-amsterdam)
 
-[29 June: Doka, Wibautstraat 150, 1091 GR, Amsterdam.](https://www.volkshotel.nl/en/weekly/hotel/life-drawing-session/)
-
 [28 July: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301/)
 
 [1 September: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301/)
