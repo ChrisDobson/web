@@ -76,4 +76,4 @@ If you enjoy following my modelling journey and would like to support me financi
 - Instagram: [@artmodel_chris](https://instagram.com/artmodel_chris)
 - OnlyFans: [@modelchris](https://onlyfans.com/modelchris)
 - Patreon: [@modelchris](https://patreon.com/modelchris)
-- YouTube: [Chris Does Politics](https://youtube.com/@chrisdoespolitics)
+- YouTube: [@chrisdoespolitics](https://youtube.com/@chrisdoespolitics)
