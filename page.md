@@ -34,10 +34,23 @@ One of the most rewarding aspects of my job is seeing what artists create. Here 
 
 See Bastiaan's website for even more of his art - [including a painting of me that is so NSFW, I dared not include it on my website! 🔥](https://www.bastiaanmol-maleart.nl/)
 
+### [Hypercaustic](https://bsky.app/profile/hypercaustic.bsky.social)
+
+<a href="https://bsky.app/profile/hypercaustic.bsky.social" target="_blank" rel="noopener">
+<img src="art/digital.jpg" alt="An image of Chris by Hypercaustic" width="500" />
+</a>
+
+
+<a href="https://bsky.app/profile/hypercaustic.bsky.social" target="_blank" rel="noopener">
+<img src="art/digital.jpg" alt="An image of Chris by Hypercaustic" width="500" />
+</a>
+
+[Hypercaustic is also on X.](https://x.com/hypercaustic)
+
 ### [Proxodus Red Carpet](https://www.patreon.com/Proxodusredcarpet)
 
 <a href="https://www.patreon.com/Proxodusredcarpet" target="_blank" rel="noopener">
-<img src="art/digital.jpg" alt="A painting of Chris by Proxodus Red Carpet" width="500" />
+<img src="art/digital.jpg" alt="An image of Chris by Proxodus Red Carpet" width="500" />
 </a>
 
 If you like this picture of me by Proxodus Red Carpet, [there are even more artworks like this on his Patreon!](https://www.patreon.com/Proxodusredcarpet)
