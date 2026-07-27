@@ -37,12 +37,12 @@ See Bastiaan's website for even more of his art - [including a painting of me th
 ### [Hypercaustic](https://bsky.app/profile/hypercaustic.bsky.social)
 
 <a href="https://bsky.app/profile/hypercaustic.bsky.social" target="_blank" rel="noopener">
-<img src="art/digital.jpg" alt="An image of Chris by Hypercaustic" width="500" />
+<img src="art/hypercaustic1.jpeg" alt="An image of Chris by Hypercaustic" width="500" />
 </a>
 
 
 <a href="https://bsky.app/profile/hypercaustic.bsky.social" target="_blank" rel="noopener">
-<img src="art/digital.jpg" alt="An image of Chris by Hypercaustic" width="500" />
+<img src="art/hypercaustic2.jpeg" alt="An image of Chris by Hypercaustic" width="500" />
 </a>
 
 [Hypercaustic is also on X.](https://x.com/hypercaustic)
