@@ -55,6 +55,15 @@ See Bastiaan's website for even more of his art - [including a painting of me th
 
 If you like this picture of me by Proxodus Red Carpet, [there are even more artworks like this on his Patreon!](https://www.patreon.com/Proxodusredcarpet)
 
+
+### [Allan Spong](https://bsky.app/profile/alspong.bsky.social)
+
+<a href="https://bsky.app/profile/alspong.bsky.social" target="_blank" rel="noopener">
+<img src="art/bluesky.jpeg" alt="A drawing of Chris by Allan Spong" width="500" />
+</a>
+
+Allan provides life drawing classes on [Meetup.](https://www.meetup.com/nl-nl/amsterdam-figure-drawing-at-spong-atelier/)
+
 ---
 
 ## Draw me ✍️
@@ -62,8 +71,6 @@ If you like this picture of me by Proxodus Red Carpet, [there are even more artw
 On this page, I will share all upcoming open life drawing sessions where I will be the model:
 
 [Anytime: Through YourCityBuddy, you can hire me as your personal tour guide in Amsterdam! This includes the option to draw me.](https://www.yourcitybuddy.com/en/experiences/amsterdam-an-art-models-guide-to-amsterdam)
-
-[28 July: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301/)
 
 [11 August: Café Atelier, Postjesweg 57, 1057 DW, Amsterdam.](https://www.cafe-atelier.nl/life-drawing)
 
