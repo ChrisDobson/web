@@ -62,7 +62,7 @@ If you like this picture of me by Proxodus Red Carpet, [there are even more artw
 <img src="art/bluesky.jpeg" alt="A drawing of Chris by Allan Spong" width="500" />
 </a>
 
-Allan has drawn me 4bid gallery. He also provides life drawing classes on [Meetup.](https://www.meetup.com/nl-nl/amsterdam-figure-drawing-at-spong-atelier/)
+Allan has drawn me at 4bid gallery. He also provides life drawing classes on [Meetup.](https://www.meetup.com/nl-nl/amsterdam-figure-drawing-at-spong-atelier/)
 
 ---
 
