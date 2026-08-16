@@ -72,13 +72,13 @@ On this page, I will share all upcoming open life drawing sessions where I will 
 
 [Anytime: Through YourCityBuddy, you can hire me as your personal tour guide in Amsterdam! This includes the option to draw me.](https://www.yourcitybuddy.com/en/experiences/amsterdam-an-art-models-guide-to-amsterdam)
 
-[11 August: Café Atelier, Postjesweg 57, 1057 DW, Amsterdam.](https://www.cafe-atelier.nl/life-drawing)
-
 [18 August: Dutch Atelier of Realist Art, Zuider Emmakade 45F, 2012 KN, Haarlem.](https://dutchatelierofrealistart.zohobookings.eu/#/dutchatelierofrealistart)
 
-[1 September: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301/)
+[1 September: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301)
 
-[6 September: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301/)
+[5 September: Modeltekenen en Meer, Terschellingpad 2, 2036 KH, Haarlem.](https://modeltekenenenmeer.com)
+
+[6 September: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301)
 
 ---
 
