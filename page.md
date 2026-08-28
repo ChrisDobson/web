@@ -64,6 +64,14 @@ If you like this picture of me by Proxodus Red Carpet, [there are even more artw
 
 Allan has drawn me at 4bid gallery in Amsterdam. He also provides life drawing classes on [Meetup.](https://www.meetup.com/nl-nl/amsterdam-figure-drawing-at-spong-atelier/)
 
+### [Mike MarZ](https://www.instagram.com/mikestarmrz)
+
+<a href="https://www.instagram.com/mikestarmrz" target="_blank" rel="noopener">
+<img src="art/drawing.jpg" alt="A sketch of Chris by Mike MarZ" width="500" />
+</a>
+
+I connected with Mike on Instagram. He is also on [Bluesky.](https://bsky.app/profile/mikemarz1.bsky.social)
+
 ---
 
 ## Draw me ✍️
