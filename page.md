@@ -91,6 +91,7 @@ On this page, I will share all upcoming open life drawing sessions where I will 
 If you enjoy following my modelling journey and would like to support me financially, I would be very grateful!
 
 **[You can make a contribution through PayPal...](https://www.paypal.com/paypalme/cspdobson)**
+
 **[... or via BuyMeACoffee! ☕️](https://buymeacoffee.com/modelchris)**
 
 
