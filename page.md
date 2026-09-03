@@ -80,8 +80,6 @@ On this page, I will share all upcoming open life drawing sessions where I will 
 
 [Anytime: Through YourCityBuddy, you can hire me as your personal tour guide in Amsterdam! This includes the option to draw me.](https://www.yourcitybuddy.com/en/experiences/amsterdam-an-art-models-guide-to-amsterdam)
 
-[1 September: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301)
-
 [5 September: Modeltekenen en Meer, Terschellingpad 2, 2036 KH, Haarlem.](https://modeltekenenenmeer.com)
 
 [6 September: 4bid gallery, Overtoom 301, 1054 JL, Amsterdam.](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301)
@@ -92,7 +90,9 @@ On this page, I will share all upcoming open life drawing sessions where I will 
 
 If you enjoy following my modelling journey and would like to support me financially, I would be very grateful!
 
-**[You can make a contribution via PayPal.](https://www.paypal.com/paypalme/cspdobson)**
+**[You can make a contribution through PayPal...](https://www.paypal.com/paypalme/cspdobson)**
+**[... or via BuyMeACoffee! ☕️](https://buymeacoffee.com/modelchris)**
+
 
 ## Follow me 👀
 
