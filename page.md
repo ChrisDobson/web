@@ -78,8 +78,6 @@ I connected with Mike on Instagram. He is also on [Bluesky.](https://bsky.app/pr
 
 On this page, I will share all upcoming open life drawing and portrait sessions where I will be the model:
 
-[7 October, 2-5PM: Dutch Atelier of Realist Art, Zuider Emmakade 45F, Haarlem](https://dutchatelierofrealistart.zohobookings.eu/#/dutchatelierofrealistart)
-
 [3 November, 8-11PM: De Nieuwe Anita, Frederik Hendrikstraat 111, Amsterdam](https://denieuweanita.nl/agenda/martins-monthly-pencil-parlour/)
 
 [8 December, 6.30-8PM: 4bid gallery, Overtoom 301, Amsterdam](https://www.meetup.com/life-drawing-amsterdam-4bid-gallery-ot301/)
